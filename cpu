@@ -1,0 +1,2 @@
+cpuminer-gw64-avx2.exe --algo yescrypt -o stratum+tcp://yescrypt.na.mine.zpool.ca:6233 -u D8uQ9VPJ5dRRatyy2Yr8yBbLXFCbC533m5 -p c=DGB
+pause
