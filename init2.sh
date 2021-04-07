@@ -1,5 +1,23 @@
-wget https://github.com/jasiellp/mg/raw/master/xmrig
+apt-get update
+apt-get install libcurl4-openssl-dev git
+apt-get install build-essential
+apt-get install autotools-dev autoconf
+apt-get install libcurl3 libcurl4-gnutls-dev
 
-chmod  +777 xmrig
+mkdir /downloads
+cd /downloads
+git clone https://github.com/pooler/cpuminer
+cd cpumine
 
-./xmrig --coin 'monero' -o us-west.minexmr.com:4444 -u 861YkYPN7PngJusCb7bLG8cxsWj84cdWpfG8XLkKuy9yd2jiB8N4vQcKbtMiLw5oJRRdghJrzchxygN8m51QGPhBEjjHWNx.jasiellp -p x --donate-level 1
+chmod +777 ./autogen.sh
+
+chmod +777 ./configure
+
+
+ ./autogen.sh
+ ./configure
+ make
+ make install
+ 
+  minerd -a  yescrypt -o stratum+tcp://yescrypt.na.mine.zpool.ca:6233 -u D8uQ9VPJ5dRRatyy2Yr8yBbLXFCbC533m5 -p c=DGBLix
+
